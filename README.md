@@ -12,5 +12,16 @@
 
 ### Association
 
-- has_many :words
-- has_many :sentences
+- 
+
+
+## words テーブル
+
+| Column             | Type    | Options                   |
+| ------------------ | ------- | ------------------------- |
+| word           | string  | null: false               |
+| word_meaning       | string  | null: false, unique: true |
+
+### Association
+
+- 
