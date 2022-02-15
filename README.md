@@ -17,10 +17,10 @@
 
 ## words テーブル
 
-| Column             | Type    | Options                   |
-| ------------------ | ------- | ------------------------- |
-| word           | string  | null: false               |
-| word_meaning       | string  | null: false, unique: true |
+| Column         | Type    | Options                   |
+| -------------- | ------- | ------------------------- |
+| word           | string  | null: false, unique: true |
+| word_meaning   | string  | null: false               |
 
 ### Association
 
