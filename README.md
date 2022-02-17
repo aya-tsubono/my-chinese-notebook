@@ -14,6 +14,19 @@
 
 - has_many :words
 - has_many :sentences
+- has_one :answer
+
+## answers テーブル
+
+| Column     | Type       | Options                         |
+| ---------- | ---------- | ------------------------------- |
+| correct    | integer    |                                 |
+| incorrect  | integer    |                                 |
+| user_id    | references | null: false, foreign_key: true  |
+
+### Association
+
+- belongs_to :user
 
 
 ## words テーブル
