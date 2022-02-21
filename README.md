@@ -40,7 +40,7 @@
 
 ### Association
 
-- 
+- belongs_to :user
 
 
 ## sentences テーブル
@@ -52,4 +52,4 @@
 
 ### Association
 
-- 
+- belongs_to :user
