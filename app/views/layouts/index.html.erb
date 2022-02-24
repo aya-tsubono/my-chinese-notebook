@@ -1,5 +1,19 @@
-<div class='main'>
+<%# ヘッダー %>
+<header class='top-page-header'>
+  <div class='nav'>
+    <ul class='lists-right'>
+      <% if user_signed_in? %>
+      <li><%= link_to current_user.nickname+"'s My Page", root_path, class: "my-page" %></li>
+      <li><%= link_to 'Logout', root_path, method: :delete, class: "logout" %></li>
+      <% else %>
+      <li><%= link_to 'Login', root_path, class: "login" %></li>
+      <% end %>
+    </ul>
+  </div>
+</header>
+<%# //ヘッダー %>
 
+<div class='main'>
 <%# タイトル %>
   <div class='main-title'>
     <span>中国語勉強アプリ</span>
