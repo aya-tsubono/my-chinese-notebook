@@ -54,30 +54,60 @@
 /* //ヘッダー */
 
 /* メイン画面 */
+.main {
+  margin: 3vw;
+}
 .main-title {
   font-size: 35px;
 }
 
-.contents-list {
+.contents-select {
+  display: flex;
+  justify-content: space-between;
 }
 
-.register-link {
+.register-select {
+  display: inline-block;
+  background-color:  #CC99CC;
+  height:  400px;
+  width: 45%;
+  padding: 2vh;
 }
 
-.register-btn {
+.select-text {
+  font-size: 25px;
+  text-align: center;
+}
+
+.select-links {
+  display:flex;
+  flex-flow: column;
+  text-align: center;
+  padding: 2vh;
+}
+
+.select-btn {
   text-decoration: none;
+  background-color: #FFCCFF;
+  font-size: 20px;
+  padding: 2vh;
+  margin: 2vh;
 }
 
-.test-link {
-
+.test-select {
+  display: inline-block;
+  background-color:  #CC99CC;
+  height:  400px;
+  width: 45%;
+  padding: 2vh;
 }
 
-.word-test-btn {
+.select-test-btn {
   text-decoration: none;
-}
-
-.sentence-test-btn {
-  text-decoration: none;
+  background-color: #FFCCFF;
+  font-size: 20px;
+  padding: 2vh;
+  margin: 1vh;
 }
 
 /* //メイン画面 */
