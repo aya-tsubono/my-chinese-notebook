@@ -1,0 +1,45 @@
+<%# ヘッダー %>
+<header class='top-page-header'>
+  <div class='nav'>
+    <ul class='lists-right'>
+      <%# if user_signed_in? %>
+      <li><%= link_to " My Page", root_path, class: "my-page" %></li>
+      <li><%= link_to 'Logout', root_path, method: :delete, class: "logout" %></li>
+      <%# else %>
+      <li><%= link_to 'Login', root_path, class: "login" %></li>
+      <%# end %>
+    </ul>
+  </div>
+</header>
+<%# //ヘッダー %>
+
+<%# メイン画面 %>
+<div class='main'>
+  <div class='main-title'>
+    <span>中国語勉強アプリ</span>
+  </div>
+  <br><br><br>
+  <div class='contents-select'>
+    <div class='register-select'>
+      <div class='select-text'>
+        登録
+      </div>
+      <div class='select-links'>
+        <%= link_to "単語の登録", root_path, class:"select-btn" %>
+        <%= link_to "例文の登録", root_path, class:"select-btn" %>
+      </div>
+    </div>
+    <div class='test-select'>
+      <div class='select-text'>
+        テスト
+      </div>
+      <div class='select-links'>
+        <%= link_to "単語テスト", root_path, class:"select-test-btn" %>
+        <%= link_to "単語の意味テスト", root_path, class:"select-test-btn" %>
+        <%= link_to "例文の筆記テスト", root_path, class:"select-test-btn" %>
+        <%= link_to "例文の意味テスト", root_path, class:"select-test-btn" %>
+      </div>
+    </div>
+  </div>  
+</div>
+<%# //メイン画面 %>
