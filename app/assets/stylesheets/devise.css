@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 20px 0;
+  padding: 2vh 0;
 }
 
 .registration-main {
@@ -13,7 +13,7 @@
   background-color: #FFF;
   width: 80%;
   min-width: 450px;
-  padding: 10vh 15vw;
+  padding: 4vh 6vw;
 }
 
 .form-wrap {
