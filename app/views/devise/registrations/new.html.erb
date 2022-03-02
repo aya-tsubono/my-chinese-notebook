@@ -38,6 +38,7 @@
           下記ボタンを押すと、ユーザー登録が完了します。
         </h2>
       </div>
+      <input name="user[registration_date]" type="hidden" value=<%= Date.today %>>
       <div class='btn-contents'>
         <%= f.submit "登  録" ,class:"register-btn" %>
       </div>
