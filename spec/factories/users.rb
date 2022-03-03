@@ -4,6 +4,6 @@ FactoryBot.define do
     password = Faker::Internet.password(min_length: 6)
     password              {password}
     password_confirmation {password}
-    registrartion_date    { Faker::Date.backward }
+    registration_date    { Faker::Date.backward }
   end
 end
