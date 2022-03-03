@@ -1,14 +1,22 @@
 <div class="word-main">
   <div class="inner">
     <div class="form__wrapper">
-      <h2 class="page-heading">単語登録</h2>
+      <h2 class="page-heading">単語の登録</h2>
       <%= form_with model: @word, local: true do |f|%>
         <div class="field">
-          <%= f.label :title, "仮フォーム" %><br />
-          <%= f.text_field :title, id:"title" %>
+          <%= f.label :words, "単語" %><br />
+          <%= f.text_field :words, id:"words" %>
+        </div>
+        <div class="field">
+          <%= f.label :words_meaning, "単語の意味" %><br />
+          <%= f.text_field :words_meaning, id:"words_meaning" %>
+        </div>
+        <div class="field">
+          <%= f.label :words_pronunciation, "単語の発音" %><br />
+          <%= f.text_field :words_pronunciation, id:"words_pronunciation" %>
         </div>
         <div class="actions">
-          <%= f.submit "保存", class: :form__btn  %>
+          <%= f.submit "単語の登録", class: :test_form_btn  %>
         </div>
       <% end %>
     </div>
