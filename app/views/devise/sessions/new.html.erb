@@ -25,8 +25,16 @@
       <%= f.password_field :password, class:"input-default", id:"password", placeholder:"" %>
     </div>
     <div class='btn-contents'>
-      <%= f.submit "ログイン" ,class:"register-btn" %>
+      <%= f.submit "ログイン" ,class:"btn btn--green btn--radius" %>
     </div>
   </div>
   <% end %>
+  <div class='registration-content'>
+    <div class="form-group">
+      <h2 class='form-bottom-text'>
+        ↓まだ登録していない方↓
+      </h2>
+    </div>
+    <%= link_to "新規登録はこちら", new_user_registration_path, class: "btn btn--green btn--radius" %>
+  </div>
 </div>
