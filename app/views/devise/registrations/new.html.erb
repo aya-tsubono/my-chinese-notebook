@@ -31,17 +31,18 @@
         </div>
         <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
       </div>
-      <br><br>
-
-      <div class="form-group">
-        <h2 class='form-bottom-text'>
-          下記ボタンを押すと、ユーザー登録が完了します。
-        </h2>
-      </div>
       <input name="user[registration_date]" type="hidden" value=<%= Date.today %>>
       <div class='btn-contents'>
         <%= f.submit "登  録" ,class:"btn btn--green btn--radius" %>
       </div>
     </div>
     <% end %>
+    <div class='registration-content'>
+      <div class="form-group">
+        <h2 class='form-bottom-text'>
+          ↓すでに登録している方↓
+        </h2>
+      </div>
+      <%= link_to "ログインはこちら", new_user_session_path, class: "btn btn--green btn--radius" %>
+    </div>
 </div>
