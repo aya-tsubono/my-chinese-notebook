@@ -4,14 +4,14 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 2vh 0;
+  padding: 4vh 0;
 }
 
 .registration-main {
   display: flex;
   justify-content: center;
   background-color: #FFF;
-  width: 80%;
+  width: 70%;
   padding: 4vh 6vw;
 }
 
@@ -84,7 +84,7 @@
 /* 新規登録ボタン */
 .registration-content {
   background-color: #fff;
-  width: 80%;
+  width: 70%;
   text-align: center;
   padding-bottom: 4vh;
 }
