@@ -1,0 +1,16 @@
+<div class="word-main">
+  <div class="inner">
+    <div class="form__wrapper">
+      <h2 class="page-heading">単語登録</h2>
+      <%= form_with model: @word, local: true do |f|%>
+        <div class="field">
+          <%= f.label :title, "仮フォーム" %><br />
+          <%= f.text_field :title, id:"title" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "保存", class: :form__btn  %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
