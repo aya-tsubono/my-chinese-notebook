@@ -1,0 +1,48 @@
+.word-main {
+  background-color: thistle;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 4vh 0;
+}
+
+.inner {
+  justify-content: center;
+  background-color: #FFF;
+  width: 70%;
+  padding: 4vh 6vw;
+}
+
+.page-heading {
+  font-size: 20px;
+  padding: 2vh;
+  text-align: center;
+}
+
+.form__wrapper {
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+}
+
+.field {
+  padding: 1vh 0;
+}
+
+.actions {
+  text-align: center;
+  padding: 3vh 0;
+}
+
+/* 登録ボタン(devise.cssと共通) */
+.btn--purple,
+a.btn--purple {
+  color: #fff;
+  background-color: rebeccapurple;
+}
+
+.btn--purple:hover,
+a.btn--purple:hover {
+  color: #fff;
+  background: thistle;
+/* //登録ボタン */
