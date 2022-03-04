@@ -15,31 +15,33 @@
 
 <%# メイン画面 %>
 <div class='main'>
-  <div class='main-title'>
-    <span>中国語勉強アプリ</span>
+  <div class='main-inner'>
+    <div class='main-title'>
+      <span>中国語勉強アプリ</span>
+    </div>
+    <br><br><br>
+    <div class='contents-select'>
+      <div class='register-select'>
+        <div class='select-text'>
+          登録
+        </div>
+        <div class='select-links'>
+          <%= link_to "単語の登録", new_word_path, class:"btn btn--orange btn--cubic" %>
+          <%= link_to "例文の登録", root_path, class:"btn btn--orange btn--cubic" %>
+        </div>
+      </div>
+      <div class='test-select'>
+        <div class='select-text'>
+          テスト
+        </div>
+        <div class='select-links'>
+          <%= link_to "単語テスト", root_path, class:"btn btn--orange btn--cubic" %>
+          <%= link_to "単語の意味テスト", root_path, class:"btn btn--orange btn--cubic" %>
+          <%= link_to "例文の筆記テスト", root_path, class:"btn btn--orange btn--cubic" %>
+          <%= link_to "例文の意味テスト", root_path, class:"btn btn--orange btn--cubic" %>
+        </div>
+      </div>
+    </div>  
   </div>
-  <br><br><br>
-  <div class='contents-select'>
-    <div class='register-select'>
-      <div class='select-text'>
-        登録
-      </div>
-      <div class='select-links'>
-        <%= link_to "単語の登録", new_word_path, class:"select-btn" %>
-        <%= link_to "例文の登録", root_path, class:"select-btn" %>
-      </div>
-    </div>
-    <div class='test-select'>
-      <div class='select-text'>
-        テスト
-      </div>
-      <div class='select-links'>
-        <%= link_to "単語テスト", root_path, class:"select-test-btn" %>
-        <%= link_to "単語の意味テスト", root_path, class:"select-test-btn" %>
-        <%= link_to "例文の筆記テスト", root_path, class:"select-test-btn" %>
-        <%= link_to "例文の意味テスト", root_path, class:"select-test-btn" %>
-      </div>
-    </div>
-  </div>  
 </div>
 <%# //メイン画面 %>
