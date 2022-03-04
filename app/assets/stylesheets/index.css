@@ -79,7 +79,7 @@
 
 .register-select {
   display: inline-block;
-  border: 3px dotted thistle;
+  border-radius: 60px;
   background-color: #FFF;
   height:  500px;
   width: 45%;
@@ -101,7 +101,7 @@
 
 .test-select {
   display: inline-block;
-  border: 3px dotted thistle;
+  border-radius: 60px;
   background-color: #FFF;
   height:  500px;
   width: 45%;
@@ -112,8 +112,8 @@
 /* ボタン */
 a.btn--orange {
   color: #fff;
-  background-color: #eb6100;
-  border-bottom: 5px solid #b84c00;
+  background-color: darkmagenta;
+  border-bottom: 5px solid indigo;
   font-size: 20px;
   padding: 2vh;
   margin: 2vh;
@@ -121,8 +121,8 @@ a.btn--orange {
 a.btn--orange:hover {
   margin-top: 3px;
   color: #fff;
-  background: #f56500;
-  border-bottom: 2px solid #b84c00;
+  background: darkmagenta;
+  border-bottom: 2px solid indigo;
 }
 /* //ボタン */
 
