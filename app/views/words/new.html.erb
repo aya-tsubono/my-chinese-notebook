@@ -1,7 +1,7 @@
 <div class="word-main">
   <div class="inner">
+    <div class="page-heading">単語の登録</div>
     <div class="form__wrapper">
-      <h2 class="page-heading">単語の登録</h2>
       <%= form_with model: @word, local: true do |f|%>
         <div class="field">
           <%= f.label :words, "単語" %><br />
@@ -16,7 +16,7 @@
           <%= f.text_field :words_pronunciation, id:"words_pronunciation" %>
         </div>
         <div class="actions">
-          <%= f.submit "単語の登録", class: :test_form_btn  %>
+          <%= f.submit "登録", class: "btn btn--purple btn--radius" %>
         </div>
       <% end %>
     </div>
