@@ -3,10 +3,10 @@
   <div class='nav'>
     <ul class='lists-right'>
       <%# if user_signed_in? %>
-      <li><%= link_to " My Page", root_path, class: "my-page" %></li>
-      <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      <li><%= link_to " My Page", root_path, class: "btn btn-border-shadow btn-border-shadow--color" %></li>
+      <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-border-shadow btn-border-shadow--color" %></li>
       <%# else %>
-      <li><%= link_to 'Login', user_session_path, class: "login" %></li>
+      <li><%= link_to 'Login', user_session_path, class: "btn btn-border-shadow btn-border-shadow--color" %></li>
       <%# end %>
     </ul>
   </div>

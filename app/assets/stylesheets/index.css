@@ -20,36 +20,52 @@
 .lists-right {
   display: flex;
   list-style: none;
-  margin-right: 1vw;
 }
 
-.my-page {
-  text-decoration: none;
-  margin: 0 1vw;
-  color: olivedrab;
-  padding: 7px 12px;
-}
-
-.logout {
-  text-decoration: none;
-  color: olivedrab;
-  padding: 7px 12px;
+li {
   margin: 0 1vw;
 }
-
-.login {
-  text-decoration: none;
-  padding: 7px 12px;
-  margin: 0 1vw;
-  color: olivedrab;
+/* ボタン(deviceのボタンと共通css)*/
+body {
+  padding: 30px;
 }
 
-.sign-up {
-  text-decoration: none;
-  padding: 7px 12px;
-  margin: 0 1vh;
-  color: olivedrab;
+a.btn-border-shadow {
+  padding: calc(1.5rem - 12px) 3rem 1.5rem;
+  background: #fff;
 }
+
+a.btn-border-shadow:before {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 100%;
+  height: 100%;
+  content: "";
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 3px solid #000;
+  border-radius: 2rem;
+}
+
+a.btn-border-shadow:hover {
+  padding: calc(1.5rem - 6px) 3rem;
+}
+
+a.btn-border-shadow:hover:before {
+  top: 0;
+  left: 0;
+}
+
+a.btn-border-shadow--color {
+  border-radius: 0;
+  background: mediumpurple;
+}
+
+a.btn-border-shadow--color:before {
+  border-radius: 0;
+}
+/* //ボタン*/
 
 /* //ヘッダー */
 
