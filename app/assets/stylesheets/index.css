@@ -55,8 +55,19 @@
 
 /* メイン画面 */
 .main {
-  margin: 3vw;
+  background-color: thistle;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 4vh 0;
 }
+
+.main-inner {
+  justify-content: center;
+  width: 90%;
+  padding: 4vh 6vw;
+}
+
 .main-title {
   font-size: 35px;
 }
@@ -68,9 +79,11 @@
 
 .register-select {
   display: inline-block;
-  background-color:  #CC99CC;
-  height:  400px;
+  border-radius: 60px;
+  background-color: #FFF;
+  height:  500px;
   width: 45%;
+  min-width: 350px;
   padding: 2vh;
 }
 
@@ -86,28 +99,31 @@
   padding: 2vh;
 }
 
-.select-btn {
-  text-decoration: none;
-  background-color: #FFCCFF;
+.test-select {
+  display: inline-block;
+  border-radius: 60px;
+  background-color: #FFF;
+  height:  500px;
+  width: 45%;
+  min-width: 350px;
+  padding: 2vh;
+}
+
+/* ボタン */
+a.btn--orange {
+  color: #fff;
+  background-color: darkmagenta;
+  border-bottom: 5px solid indigo;
   font-size: 20px;
   padding: 2vh;
   margin: 2vh;
 }
-
-.test-select {
-  display: inline-block;
-  background-color:  #CC99CC;
-  height:  400px;
-  width: 45%;
-  padding: 2vh;
+a.btn--orange:hover {
+  margin-top: 3px;
+  color: #fff;
+  background: darkmagenta;
+  border-bottom: 2px solid indigo;
 }
-
-.select-test-btn {
-  text-decoration: none;
-  background-color: #FFCCFF;
-  font-size: 20px;
-  padding: 2vh;
-  margin: 1vh;
-}
+/* //ボタン */
 
 /* //メイン画面 */

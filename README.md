@@ -34,9 +34,9 @@
 
 | Column             | Type    | Options                   |
 | ------------------ | ------- | ------------------------- |
-| word               | string  | null: false, unique: true |
-| word_meaning       | string  | null: false               |
-| word_pronunciation | string  | null: false               |
+| words              | string  | null: false, unique: true |
+| words_meaning      | string  | null: false               |
+| words_pronunciation| string  | null: false               |
 
 ### Association
 
