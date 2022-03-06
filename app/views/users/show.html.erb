@@ -1,0 +1,20 @@
+<div class="user-main">
+  <div class="user-inner">
+    <div class="my-page-title">
+    <%= @user.nickname+"'さん のマイページ"%>
+    </div>
+    <%# 勉強日数 %>
+    <div class="study-days">
+      <%= '学習開始から〜日' %>
+    </div>
+    <%# //勉強日数 %>
+    <%# ユーザー情報 %>
+    <div class="user-wrapper">
+      <h2 class="page-heading">
+        <%= @user.nickname+"さん のプロフィール" %>
+        <%= @user.registration_date %>
+      </h2>
+    </div>
+    <%# //ユーザー情報 %>
+  </div>
+</div>
