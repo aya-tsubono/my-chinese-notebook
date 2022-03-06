@@ -27,6 +27,11 @@ RSpec.describe Word, type: :model do
         @word.valid?
         expect(@word.errors.full_messages).to include("Words pronunciation can't be blank")
       end
+      it 'userが紐付いていないと保存できない' do
+        @word.user = nil
+        @word.valid?
+        expect(@word.errors.full_messages).to include('User must exist')
+      end
     end
   end
 end
