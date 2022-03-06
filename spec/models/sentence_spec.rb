@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Sentence, type: :model do
+  before do
+    @sentence = FactoryBot.build(:sentence)
+  end
+
   describe '例文の登録' do
     context '登録できる場合' do
       it '全ての項目を正しく入力すれば登録できる' do
