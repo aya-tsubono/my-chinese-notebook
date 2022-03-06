@@ -28,10 +28,6 @@ li {
 }
 
 /* navボタン(deviceのボタンと共通css)*/
-body {
-  padding: 30px;
-}
-
 a.btn-border-shadow {
   padding: calc(1.5rem - 12px) 3rem 1.5rem;
   background: #fff;

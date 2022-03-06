@@ -24,22 +24,24 @@
 
 .form__wrapper {
   display: flex;
-  font-size: 14px;
+  font-size: 16px;
   justify-content: center;
+}
+.register-form {
+  width: 80%;
 }
 
 .field {
-  padding: 1vh 0;
-  font-size: 16px;
+  padding: 2vh 0;
 }
 
 .text-form {
   width: 100%;
-  padding: 14px 14px 5px;
-  border-radius: 4px;
+  padding: 1.5vh;
+  border-radius: 5vh;
   border: 1px solid #ccc;
-  font-size: 18px;
   resize: none;
+  font-size: 18px;
 }
 
 .actions {
@@ -52,6 +54,8 @@
 a.btn--purple {
   color: #fff;
   background-color: mediumpurple;
+  border-radius: 5vh;
+  font-size: 18px;
 }
 
 .btn--purple:hover,
