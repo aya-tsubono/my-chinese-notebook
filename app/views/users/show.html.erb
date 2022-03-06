@@ -5,12 +5,12 @@
     </div>
     <%# 勉強日数 %>
     <div class="study-days">
-      <%= '学習開始から〜日' %>
+      <%= "学習開始から " %><%= @days.to_i %><%= " 日経過" %>
     </div>
     <%# //勉強日数 %>
     <%# ユーザー情報 %>
     <div class="user-wrapper">
-      <h2 class="page-heading">
+      <div class="profile-title">
         <%= @user.nickname+"さん のプロフィール" %>
         <%= @user.registration_date %>
       </h2>
