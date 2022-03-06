@@ -1,12 +1,13 @@
-.word-main {
-  background-color: thistle;
+.register-main {
+  background-color: lavender;
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 4vh 0;
 }
 
-.word-inner {
+.register-inner {
   justify-content: center;
   border-radius: 60px;
   background-color: #FFF;
@@ -23,22 +24,24 @@
 
 .form__wrapper {
   display: flex;
-  font-size: 14px;
+  font-size: 16px;
   justify-content: center;
+}
+.register-form {
+  width: 80%;
 }
 
 .field {
-  padding: 1vh 0;
-  font-size: 16px;
+  padding: 2vh 0;
 }
 
 .text-form {
   width: 100%;
-  padding: 14px 14px 5px;
-  border-radius: 4px;
+  padding: 1.5vh;
+  border-radius: 5vh;
   border: 1px solid #ccc;
-  font-size: 18px;
   resize: none;
+  font-size: 18px;
 }
 
 .actions {
@@ -50,12 +53,14 @@
 .btn--purple,
 a.btn--purple {
   color: #fff;
-  background-color: darkmagenta;
+  background-color: mediumpurple;
+  border-radius: 5vh;
+  font-size: 18px;
 }
 
 .btn--purple:hover,
 a.btn--purple:hover {
   color: #fff;
-  background: violet;
+  background: indigo;
 }
 /* //登録ボタン */

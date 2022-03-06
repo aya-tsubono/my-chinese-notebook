@@ -7,6 +7,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: lavender;
 }
 
 .nav {
@@ -20,42 +21,55 @@
 .lists-right {
   display: flex;
   list-style: none;
-  margin-right: 1vw;
 }
 
-.my-page {
-  text-decoration: none;
-  margin: 0 1vw;
-  color: olivedrab;
-  padding: 7px 12px;
-}
-
-.logout {
-  text-decoration: none;
-  color: olivedrab;
-  padding: 7px 12px;
+li {
   margin: 0 1vw;
 }
 
-.login {
-  text-decoration: none;
-  padding: 7px 12px;
-  margin: 0 1vw;
-  color: olivedrab;
+/* navボタン(deviceのボタンと共通css)*/
+a.btn-border-shadow {
+  padding: calc(1.5rem - 12px) 3rem 1.5rem;
+  background: #fff;
 }
 
-.sign-up {
-  text-decoration: none;
-  padding: 7px 12px;
-  margin: 0 1vh;
-  color: olivedrab;
+a.btn-border-shadow:before {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 100%;
+  height: 100%;
+  content: "";
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 3px solid indigo;
+  border-radius: 2rem;
 }
+
+a.btn-border-shadow:hover {
+  padding: calc(1.5rem - 6px) 3rem;
+}
+
+a.btn-border-shadow:hover:before {
+  top: 0;
+  left: 0;
+}
+
+a.btn-border-shadow--color {
+  border-radius: 0;
+  background: mediumpurple;
+}
+
+a.btn-border-shadow--color:before {
+  border-radius: 0;
+}
+/* //ボタン*/
 
 /* //ヘッダー */
 
 /* メイン画面 */
 .main {
-  background-color: thistle;
+  background-color: lavender;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -112,7 +126,7 @@
 /* ボタン */
 a.btn--orange {
   color: #fff;
-  background-color: darkmagenta;
+  background-color: mediumpurple;
   border-bottom: 5px solid indigo;
   font-size: 20px;
   padding: 2vh;
@@ -121,7 +135,7 @@ a.btn--orange {
 a.btn--orange:hover {
   margin-top: 3px;
   color: #fff;
-  background: darkmagenta;
+  background: mediumpurple;
   border-bottom: 2px solid indigo;
 }
 /* //ボタン */

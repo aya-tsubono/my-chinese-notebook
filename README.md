@@ -32,11 +32,12 @@
 
 ## words テーブル
 
-| Column             | Type    | Options                   |
-| ------------------ | ------- | ------------------------- |
-| words              | string  | null: false, unique: true |
-| words_meaning      | string  | null: false               |
-| words_pronunciation| string  | null: false               |
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| words              | string     | null: false, unique: true      |
+| words_meaning      | string     | null: false                    |
+| words_pronunciation| string     | null: false                    |
+| user_id            | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -45,10 +46,11 @@
 
 ## sentences テーブル
 
-| Column                 | Type    | Options                   |
-| ---------------------- | ------- | ------------------------- |
-| sentence               | string  | null: false, unique: true |
-| sentence_meaning       | string  | null: false               |
+| Column                 | Type       | Options                        |
+| ---------------------- | ---------- | ------------------------------ |
+| sentence               | string     | null: false, unique: true      |
+| sentence_meaning       | string     | null: false                    |
+| user_id                | references | null: false, foreign_key: true |
 
 ### Association
 

@@ -44,13 +44,12 @@
 }
 
 .indispensable {
-  background: #ea352d;
+  background: darkmagenta;
   margin-left: 8px;
-  padding: 3px 4px;
+  padding: 3px 5px;
   border-radius: 3px;
   color: #fff;
   font-size: 12px;
-  font-weight: bold;
 }
 
 .form-text-wrap {
@@ -132,9 +131,9 @@ button.btn {
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
-  letter-spacing: 0.1em;
-  color: #212529;
-  border-radius: 1.5rem;
+  letter-spacing: 0.3em;
+  color: #fff;
+  border-radius: 2rem;
 }
 
 .btn--green,
