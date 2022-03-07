@@ -26,13 +26,19 @@
 }
 
 .study-days {
-  padding-bottom: 4vh;
+  padding-bottom: 6vh;
+  color: indigo;
+  font-weight: bold;
 }
 
 .profile-title {
+  width: 50%;
   padding-bottom: 2vh;
+  border-bottom: 1px solid indigo;
+  line-height: 20px;
 }
 
 .profile-content {
   font-size: 18px;
+  padding: 2vh;
 }
