@@ -1,0 +1,25 @@
+<%= render "shared/header" %>
+
+<div class="user-main">
+  <div class="user-inner">
+    <div class="my-page-title">
+    <%= @user.nickname+" さん のマイページ"%>
+    </div>
+    <div class="user-wrapper">
+      <%# 勉強日数 %>
+      <div class="study-days">
+        <%= "学習開始から " %><%= @days.to_i %><%= " 日経過" %>
+      </div>
+      <%# //勉強日数 %>
+      <%# ユーザー情報 %>
+      <div class="profile-title">
+        <%= @user.nickname+"さん のプロフィール" %>
+      </div>
+      <div class="profile-content">
+        <%= 'メールアドレス： ' %><%= @user.email %><br>
+        <%= '学習開始日： ' %><%= @user.registration_date.strftime('%Y年%m月%d日(%a)') %>
+      </div>
+      <%# //ユーザー情報 %>
+    </div>
+  </div>
+</div>
