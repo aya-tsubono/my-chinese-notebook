@@ -13,14 +13,21 @@
 .nav {
   font-size: 25px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
+}
+
+.lists-left {
+  display: flex;
+  list-style: none;
+  padding: 0 2vw;
 }
 
 .lists-right {
   display: flex;
   list-style: none;
+  padding: 0 2vw;
 }
 
 li {
