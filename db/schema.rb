@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_06_132547) do
+ActiveRecord::Schema.define(version: 2022_03_05_082422) do
 
   create_table "sentences", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "sentences", null: false
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2022_03_06_132547) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "nickname", null: false
     t.string "email", null: false
     t.string "encrypted_password", null: false
     t.date "registration_date", null: false
@@ -30,7 +31,6 @@ ActiveRecord::Schema.define(version: 2022_03_06_132547) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "nickname"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -39,9 +39,9 @@ ActiveRecord::Schema.define(version: 2022_03_06_132547) do
     t.string "words", null: false
     t.string "words_meaning", null: false
     t.string "words_pronunciation", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_words_on_user_id"
   end
 

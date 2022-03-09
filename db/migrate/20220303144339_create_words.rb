@@ -4,6 +4,7 @@ class CreateWords < ActiveRecord::Migration[6.0]
       t.string  :words,               null: false, unique: true
       t.string  :words_meaning,       null: false
       t.string  :words_pronunciation, null: false
+      t.references :user,             null: false, foreign_key: true
       t.timestamps
     end
   end
