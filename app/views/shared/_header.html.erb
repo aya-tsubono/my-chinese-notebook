@@ -5,7 +5,7 @@
     </ul>
     <ul class='lists-right'>
       <% if user_signed_in? %>
-      <li><%= link_to current_user.nickname+"さんの MyPage", user_path(current_user), class: "btn btn-border-shadow btn-border-shadow--color" %></li>
+      <li><%= link_to "さんの MyPage", user_path(current_user), class: "btn btn-border-shadow btn-border-shadow--color" %></li>
       <li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-border-shadow btn-border-shadow--color" %></li>
       <% else %>
       <li><%= link_to 'Login', user_session_path, class: "btn btn-border-shadow btn-border-shadow--color" %></li>
