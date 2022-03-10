@@ -2,22 +2,21 @@
 
 <div class="user-main">
   <div class="user-inner">
-    <div class="my-page-title">
+    <h1 class="my-page-title">
     <%= @user.nickname %><%= "さん のマイページ" %>
+    </h1>
+    <%# 勉強日数 %>
+    <div class="study-days">
+      <%= "学習開始から " %><%= @days.to_i %><%= " 日経過" %>
     </div>
+    <%# //勉強日数 %>
+    
     <div class="user-wrapper">
-        <%# 勉強日数 %>
-      <div class="user-contents">
-        <div class="study-days">
-          <%= "学習開始から " %><%= @days.to_i %><%= " 日経過" %>
-        </div>
-      </div>
-        <%# //勉強日数 %>
         <%# ユーザー情報 %>
       <div class="user-contents">
-        <div class="profile-title">
+        <h3 class="user-title">
           <%= @user.nickname %><%= "さん のプロフィール" %>
-        </div>
+        </h3>
         <div class="profile-content">
           <%= 'メールアドレス： ' %><%= @user.email %><br>
           <%= '学習開始日： ' %><%= @user.registration_date.strftime('%Y年%m月%d日(%a)') %>
@@ -26,11 +25,10 @@
         <%# //ユーザー情報 %>
         <%# word一覧 %>
       <div class="user-contents">
-        <% if user_signed_in? && (current_user.id == @user.id) %>
-          <div class="word-lists">
-            <div class="word-post-title">
+          <div class="user-title">
             <%= "投稿一覧" %>
-            </div>
+          </div>
+          <div class="word-lists">
             <% current_user.words.each do |word| %>
             <div class="post-link">
               <%= "・" %>
@@ -43,7 +41,6 @@
               <% end %>
             </div>
           </div>
-        <% end %>
       </div>
       <%# //word一覧 %>
     </div>
