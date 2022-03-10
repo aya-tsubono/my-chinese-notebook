@@ -20,6 +20,26 @@
         <%= '学習開始日： ' %><%= @user.registration_date.strftime('%Y年%m月%d日(%a)') %>
       </div>
       <%# //ユーザー情報 %>
+      <%# ルーム一覧 %>
+      <% if user_signed_in? && (current_user.id == @user.id) %>
+        <div class="word-lists">
+          <div class="word-post-title">
+          <%= "投稿一覧" %>
+          </div>
+          <% current_user.words.each do |word| %>
+          <div class="post-link">
+            <%= "・" %>
+            <%= link_to @word.words, words_path(word) %>
+          </div>
+          <% end %>
+          <div class="no-post-text">
+            <% if @word.length == 0 %>
+            <%= "まだ投稿がありません" %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <%# //ルーム一覧 %>
     </div>
   </div>
 </div>
