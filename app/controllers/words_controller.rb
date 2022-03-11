@@ -15,6 +15,10 @@ class WordsController < ApplicationController
     end
   end
 
+  def edit
+    @word = Word.find(params[:id])
+  end
+
   private
 
   def word_params
