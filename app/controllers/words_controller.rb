@@ -32,6 +32,6 @@ class WordsController < ApplicationController
   private
 
   def word_params
-    params.require(:word).permit(:words, :words_meaning, :words_pronunciation).merge(user_id: current_user.id)
+    params.require(:word).permit(:words_name, :words_meaning, :words_pronunciation).merge(user_id: current_user.id)
   end
 end

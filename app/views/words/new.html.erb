@@ -7,9 +7,9 @@
       <%= form_with model: @word, class: 'register-form', local: true do |f|%>
         <%= render 'shared/error_messages', model: f.object %>
         <div class="field">
-          <%= f.label :words, "単語" %>
+          <%= f.label :words_name, "単語" %>
           <span class="indispensable">必須</span><br />
-          <%= f.text_field :words, id:"words", class:"text-form" %>
+          <%= f.text_field :words_name, id:"words_name", class:"text-form" %>
         </div>
         <div class="field">
           <%= f.label :words_meaning, "単語の意味" %>
