@@ -23,26 +23,15 @@
         </div>
       </div>
         <%# //ユーザー情報 %>
-        <%# word一覧 %>
+        <%# 投稿一覧 %>
       <div class="user-contents">
-          <div class="user-title">
-            <%= "投稿一覧" %>
-          </div>
-          <div class="word-lists">
-            <% current_user.words.each do |word| %>
-            <div class="post-link">
-              <%= "・" %>
-              <%= link_to @word.words, words_path(word) %>
-            </div>
-            <% end %>
-            <div class="no-post-text">
-              <% if @word.length == 0 %>
-              <%= "まだ投稿がありません" %>
-              <% end %>
-            </div>
+        <div class="user-title">
+          <%= "投稿一覧" %>
+        </div>
+        <%= link_to "単語の一覧", words_path, class:"btn btn--orange btn--cubic" %>
           </div>
       </div>
-      <%# //word一覧 %>
+      <%# //投稿一覧 %>
     </div>
   </div>
 </div>
