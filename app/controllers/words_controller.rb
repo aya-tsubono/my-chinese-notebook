@@ -1,6 +1,6 @@
 class WordsController < ApplicationController
   def index
-    @word =Word.all
+    @words =Word.all
   end
 
   def new
