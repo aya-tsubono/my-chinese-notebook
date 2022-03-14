@@ -1,0 +1,10 @@
+/* userのindexと共通 */
+.word-lists {
+  padding: 2vh;
+  font-size: 24px;
+  
+}
+
+.post-link {
+  list-style: none;
+}
