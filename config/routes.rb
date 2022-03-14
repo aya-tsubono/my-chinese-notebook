@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root to: 'users#index'
   
-  resources :users, only: [:show]
+  resources :users, only: [:show, :index]
   resources :words, only: [:index, :new, :create, :edit, :update]
   resources :sentences, only: [:new, :create]
 end
