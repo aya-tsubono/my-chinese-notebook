@@ -49,13 +49,3 @@
   text-align: center;
   padding: 3vh 0;
 }
-
-/* 登録ボタン(devise.cssと共通) */
-.btn--purple,
-a.btn--purple {
-  color: #fff;
-  background-color: mediumpurple;
-  border-radius: 5vh;
-  font-size: 18px;
-}
-/* //登録ボタン */
