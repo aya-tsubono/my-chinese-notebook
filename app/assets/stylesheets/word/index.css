@@ -1,7 +1,24 @@
 /* userのindexと共通 */
+.index-main {
+  background-color: lavender;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 4vh 0;
+}
+
+.index-inner {
+  justify-content: center;
+  border-radius: 60px;
+  background-color: #FFF;
+  width: 70%;
+  padding: 4vh 6vw;
+}
+
 .word-lists {
   padding: 2vh;
-  font-size: 24px;
+  font-size: 20px;
   
 }
 
