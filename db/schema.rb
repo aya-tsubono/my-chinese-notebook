@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_12_073009) do
+ActiveRecord::Schema.define(version: 2022_03_15_092322) do
 
   create_table "sentences", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "sentences", null: false
+    t.string "sentences_name", null: false
     t.string "sentences_meaning", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
