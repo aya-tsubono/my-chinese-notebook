@@ -1,0 +1,22 @@
+<%= render "shared/header" %>
+
+<%# sentence一覧 %>
+<div class='index-main'>
+  <div class='index-inner'>
+      <div class="page-heading">単語の一覧</div>    
+    <div class="index-lists">
+      <% @sentences.each do |word| %>
+        <li class="post-link">
+          <%= "・" %>
+          <%= link_to sentence.sentences, edit_sentence_path(sentence) %>
+        </li>
+      <% end %>
+      <div class="no-post-text">
+        <% if @sentences.length == 0 %>
+        <%= "まだ投稿がありません" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<%# //sentence一覧 %>
