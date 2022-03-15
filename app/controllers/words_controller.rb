@@ -1,6 +1,6 @@
 class WordsController < ApplicationController
   def index
-    @words =Word.all
+    @words = Word.all
   end
 
   def new
@@ -19,7 +19,6 @@ class WordsController < ApplicationController
   def edit
     @word = Word.find(params[:id])
   end
-
 
   def update
     @word = Word.find(params[:id])
