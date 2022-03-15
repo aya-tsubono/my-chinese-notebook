@@ -16,6 +16,19 @@ class SentencesController < ApplicationController
     end
   end
 
+  def edit
+    @sentence = Sentence.find(params[:id])
+  end
+
+  def update
+    @sentence = Sentence.find(params[:id])
+    if @sentence.update(sentence_params)
+      redirect_to user_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def sentence_params
