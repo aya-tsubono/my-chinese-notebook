@@ -1,34 +1,22 @@
 <%= render "shared/header" %>
 
-<%# メイン画面 %>
-<div class='main'>
-  <div class='main-inner'>
-    <div class='main-title'>
-      <span>中国語勉強アプリ</span>
+<%# word一覧 %>
+<div class='index-main'>
+  <div class='index-inner'>
+      <div class="page-heading">単語の一覧</div>    
+    <div class="word-lists">
+      <% @words.each do |word| %>
+        <li class="post-link">
+          <%= "・" %>
+          <%= link_to word.words_name, edit_word_path(word) %>
+        </li>
+      <% end %>
+      <div class="no-post-text">
+        <% if @words.length == 0 %>
+        <%= "まだ投稿がありません" %>
+        <% end %>
+      </div>
     </div>
-    <br><br><br>
-    <div class='contents-select'>
-      <div class='register-select'>
-        <div class='select-text'>
-          登録
-        </div>
-        <div class='select-links'>
-          <%= link_to "単語の登録", new_word_path, class:"btn btn--orange btn--cubic" %>
-          <%= link_to "例文の登録", new_sentence_path, class:"btn btn--orange btn--cubic" %>
-        </div>
-      </div>
-      <div class='test-select'>
-        <div class='select-text'>
-          テスト
-        </div>
-        <div class='select-links'>
-          <%= link_to "単語テスト", root_path, class:"btn btn--orange btn--cubic" %>
-          <%= link_to "単語の意味テスト", root_path, class:"btn btn--orange btn--cubic" %>
-          <%= link_to "例文の筆記テスト", root_path, class:"btn btn--orange btn--cubic" %>
-          <%= link_to "例文の意味テスト", root_path, class:"btn btn--orange btn--cubic" %>
-        </div>
-      </div>
-    </div>  
   </div>
 </div>
-<%# //メイン画面 %>
+<%# //word一覧 %>

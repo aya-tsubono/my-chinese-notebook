@@ -2,24 +2,36 @@
 
 <div class="user-main">
   <div class="user-inner">
-    <div class="my-page-title">
+    <h1 class="my-page-title">
     <%= @user.nickname %><%= "さん のマイページ" %>
+    </h1>
+    <%# 勉強日数 %>
+    <div class="study-days">
+      <%= "学習開始から " %><%= @days.to_i %><%= " 日経過" %>
     </div>
+    <%# //勉強日数 %>
+    
     <div class="user-wrapper">
-      <%# 勉強日数 %>
-      <div class="study-days">
-        <%= "学習開始から " %><%= @days.to_i %><%= " 日経過" %>
+        <%# ユーザー情報 %>
+      <div class="user-contents">
+        <h3 class="user-title">
+          <%= @user.nickname %><%= "さん のプロフィール" %>
+        </h3>
+        <div class="profile-content">
+          <%= 'メールアドレス： ' %><%= @user.email %><br>
+          <%= '学習開始日： ' %><%= @user.registration_date.strftime('%Y年%m月%d日(%a)') %>
+        </div>
       </div>
-      <%# //勉強日数 %>
-      <%# ユーザー情報 %>
-      <div class="profile-title">
-        <%= @user.nickname %><%= "さん のプロフィール" %>
+        <%# //ユーザー情報 %>
+        <%# 投稿一覧 %>
+      <div class="user-contents">
+        <div class="user-title">
+          <%= "投稿一覧" %>
+        </div>
+        <%= link_to "単語の一覧", words_path, class:"btn btn--orange btn--cubic" %>
+          </div>
       </div>
-      <div class="profile-content">
-        <%= 'メールアドレス： ' %><%= @user.email %><br>
-        <%= '学習開始日： ' %><%= @user.registration_date.strftime('%Y年%m月%d日(%a)') %>
-      </div>
-      <%# //ユーザー情報 %>
+      <%# //投稿一覧 %>
     </div>
   </div>
 </div>

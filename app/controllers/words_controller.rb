@@ -1,5 +1,6 @@
 class WordsController < ApplicationController
   def index
+    @words = Word.all
   end
 
   def new
@@ -15,9 +16,22 @@ class WordsController < ApplicationController
     end
   end
 
+  def edit
+    @word = Word.find(params[:id])
+  end
+
+  def update
+    @word = Word.find(params[:id])
+    if @word.update(word_params)
+      redirect_to user_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def word_params
-    params.require(:word).permit(:words, :words_meaning, :words_pronunciation).merge(user_id: current_user.id)
+    params.require(:word).permit(:words_name, :words_meaning, :words_pronunciation).merge(user_id: current_user.id)
   end
 end

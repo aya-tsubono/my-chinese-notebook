@@ -1,0 +1,81 @@
+.user-main {
+  background-color: lavender;
+  padding: 4vh 0;
+  display: flex;
+  justify-content: center;
+
+}
+
+.user-inner {
+  width: 70%;
+  border-radius: 60px;
+  background-color: #FFF;
+  padding: 4vh 6vw;
+}
+
+.my-page-title {
+  font-size: 30px;
+}
+
+h1 {
+  position: relative;
+  background: lavender;
+  box-shadow: 0px 0px 0px 5px lavender;
+  border: dashed 2px white;
+  padding: 0.2em 0.5em;
+  color: #454545;
+}
+
+h1:after {
+  position: absolute;
+  content: '';
+  left: -7px;
+  top: -7px;
+  border-width: 0 0 15px 15px;
+  border-style: solid;
+  border-color: #fff #fff thistle;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.study-days {
+  width: 50%;
+  position: relative;
+  padding: 0.6em;
+  background: -webkit-repeating-linear-gradient(-45deg, lavender, lavender 4px, ghostwhite 3px, ghostwhite 8px);
+  background: repeating-linear-gradient(-45deg, lavender, lavender 4px, ghostwhite 3px, ghostwhite 8px);
+  border-radius: 7px;
+  font-size: 24px;
+  color: #454545;
+  font-weight: bold;
+}
+
+.study-days:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid lavender;
+  width: 0;
+  height: 0;
+}
+
+.user-wrapper {
+  padding-bottom: 4vh;
+  font-size: 24px;
+}
+
+.user-contents {
+  padding-bottom: 4vh;
+  font-size: 18px;
+}
+
+.user-title {
+  color: #454545;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.profile-content {
+  padding: 2vh;
+}
