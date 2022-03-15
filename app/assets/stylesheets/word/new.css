@@ -58,10 +58,4 @@ a.btn--purple {
   border-radius: 5vh;
   font-size: 18px;
 }
-
-.btn--purple:hover,
-a.btn--purple:hover {
-  color: #fff;
-  background: indigo;
-}
 /* //登録ボタン */

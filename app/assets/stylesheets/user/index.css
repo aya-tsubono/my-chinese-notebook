@@ -132,17 +132,11 @@ a.btn-border-shadow--color:before {
 a.btn--orange {
   color: #fff;
   background-color: mediumpurple;
-  border-bottom: 5px solid indigo;
   font-size: 20px;
   padding: 2vh;
   margin: 2vh;
 }
-a.btn--orange:hover {
-  margin-top: 3px;
-  color: #fff;
-  background: mediumpurple;
-  border-bottom: 2px solid indigo;
-}
+
 /* //ボタン */
 
 /* //メイン画面 */
