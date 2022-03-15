@@ -8,7 +8,7 @@
       <% @sentences.each do |word| %>
         <li class="post-link">
           <%= "・" %>
-          <%= link_to sentence.sentences, edit_sentence_path(sentence) %>
+          <%= link_to sentence.sentences_name, edit_sentence_path(sentence) %>
         </li>
       <% end %>
       <div class="no-post-text">
