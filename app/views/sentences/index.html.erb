@@ -3,9 +3,12 @@
 <%# sentence一覧 %>
 <div class='index-main'>
   <div class='index-inner'>
-      <div class="page-heading">単語の一覧</div>    
+      <div class="page-heading">例文の一覧</div>    
+      <div class="index-link">
+        <%= link_to "単語の一覧", words_path, class:"btn btn--index btn--cubic" %>
+      </div>
     <div class="index-lists">
-      <% @sentences.each do |word| %>
+      <% @sentences.each do |sentence| %>
         <li class="post-link">
           <%= "・" %>
           <%= link_to sentence.sentences_name, edit_sentence_path(sentence) %>
