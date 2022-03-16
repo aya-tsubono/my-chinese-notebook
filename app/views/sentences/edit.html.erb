@@ -1,0 +1,25 @@
+<%= render "shared/header" %>
+
+<div class="register-main">
+  <div class="register-inner">
+    <div class="page-heading">例文の編集</div>    
+    <div class="form__wrapper">
+      <%= form_with model: @sentence, class: 'register-form', local: true do |f|%>
+        <%= render 'shared/error_messages', model: f.object %>
+        <div class="field">
+          <%= f.label :sentences_name, "例文" %>
+          <span class="indispensable">必須</span><br />
+          <%= f.text_field :sentences_name, id:"sentences", class:"text-form" %>
+        </div>
+        <div class="field">
+          <%= f.label :sentences_meaning, "例文の意味" %>
+          <span class="indispensable">必須</span><br />
+          <%= f.text_field :sentences_meaning, id:"sentences_meaning", class:"text-form" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "登録", class: "btn btn--purple btn--radius" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
