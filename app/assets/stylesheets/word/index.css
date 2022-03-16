@@ -16,10 +16,14 @@
   padding: 4vh 6vw;
 }
 
-.word-lists {
-  padding: 2vh;
+.index-link {
+  display: flex;
+  justify-content: center;
+}
+
+.index-lists {
+  margin: 4vh 2vw;
   font-size: 20px;
-  
 }
 
 .post-link {

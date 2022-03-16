@@ -1,25 +1,25 @@
 <%= render "shared/header" %>
 
-<%# word一覧 %>
+<%# sentence一覧 %>
 <div class='index-main'>
   <div class='index-inner'>
-      <div class="page-heading">単語の一覧</div>
+      <div class="page-heading">例文の一覧</div>    
       <div class="index-link">
-      <%= link_to "例文の一覧", sentences_path, class:"btn btn--index btn--cubic" %>
+        <%= link_to "単語の一覧", words_path, class:"btn btn--index btn--cubic" %>
       </div>
     <div class="index-lists">
-      <% @words.each do |word| %>
+      <% @sentences.each do |sentence| %>
         <li class="post-link">
           <%= "・" %>
-          <%= link_to word.words_name, edit_word_path(word) %>
+          <%= link_to sentence.sentences_name, edit_sentence_path(sentence) %>
         </li>
       <% end %>
       <div class="no-post-text">
-        <% if @words.length == 0 %>
+        <% if @sentences.length == 0 %>
         <%= "まだ投稿がありません" %>
         <% end %>
       </div>
     </div>
   </div>
 </div>
-<%# //word一覧 %>
+<%# //sentence一覧 %>

@@ -54,16 +54,4 @@
   min-width: 350px;
   padding: 2vh;
 }
-
-/* ボタン */
-a.btn--orange {
-  color: #fff;
-  background-color: mediumpurple;
-  font-size: 20px;
-  padding: 2vh;
-  margin: 2vh;
-}
-
-/* //ボタン */
-
 /* //メイン画面 */
