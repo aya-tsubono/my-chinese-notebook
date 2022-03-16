@@ -14,20 +14,8 @@
 
 - has_many :words
 - has_many :sentences
-- has_one :answer
-
-
-## answers テーブル
-
-| Column     | Type       | Options                         |
-| ---------- | ---------- | ------------------------------- |
-| correct    | integer    |                                 |
-| incorrect  | integer    |                                 |
-| user_id    | references | null: false, foreign_key: true  |
-
-### Association
-
-- belongs_to :user
+- has_one :word_answer
+- has_one :sentence_answer
 
 
 ## words テーブル
@@ -51,6 +39,34 @@
 | sentences_name         | string     | null: false, unique: true      |
 | sentence_meaning       | string     | null: false                    |
 | user_id                | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+
+
+## word_answers テーブル
+
+| Column      | Type       | Options                         |
+| ----------- | ---------- | ------------------------------- |
+| w_correct   | integer    |                                 |
+| w_incorrect | integer    |                                 |
+| word_id     | references | null: false, foreign_key: true  |
+| user_id     | references | null: false, foreign_key: true  |
+
+### Association
+
+- belongs_to :user
+
+
+## sentence_answers テーブル
+
+| Column       | Type       | Options                         |
+| ------------ | ---------- | ------------------------------- |
+| s_correct    | integer    |                                 |
+| s_incorrect  | integer    |                                 |
+| sentence _id | references | null: false, foreign_key: true  |
+| user_id      | references | null: false, foreign_key: true  |
 
 ### Association
 
