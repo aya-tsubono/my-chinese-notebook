@@ -34,7 +34,7 @@
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
-| words              | string     | null: false, unique: true      |
+| words_name         | string     | null: false, unique: true      |
 | words_meaning      | string     | null: false                    |
 | words_pronunciation| string     | null: false                    |
 | user_id            | references | null: false, foreign_key: true |
@@ -48,7 +48,7 @@
 
 | Column                 | Type       | Options                        |
 | ---------------------- | ---------- | ------------------------------ |
-| sentence               | string     | null: false, unique: true      |
+| sentences_name         | string     | null: false, unique: true      |
 | sentence_meaning       | string     | null: false                    |
 | user_id                | references | null: false, foreign_key: true |
 
