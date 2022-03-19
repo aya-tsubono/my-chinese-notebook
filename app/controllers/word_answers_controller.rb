@@ -1,6 +1,7 @@
 class WordAnswersController < ApplicationController
   def index
-    word_id = Word.order("RAND()").limit(1).ids
-    @random = Word.find(word_id)
+    select_word = Word.order("RAND()").limit(1).ids
+    word_id = Word.find(select_word)
+    @word = word_id.pluck(:words_meaning)
   end
 end
