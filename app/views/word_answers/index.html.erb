@@ -29,6 +29,10 @@
         <div class='answer-word-text'>
           <%= @name %>
         </div>
+        <div class='correct-contents'>
+          <%= button_to "正解", {controller: 'word_answers', action: 'index'}, {method: :post, params: {w_correct: '1', w_incorrect: '0', word_id: @word_id, user_id: current_user.id}, class: "btn btn--orange btn--cubic"} %>
+          <%= button_to "不正解", {controller: 'word_answers', action: 'index'}, {method: :post, params: {w_correct: '0', w_incorrect: '1', word_id: @word_id, user_id: current_user.id}, class: "btn btn--orange btn--cubic"} %>
+        </div>
       </div>
     </div>  
   </div>
