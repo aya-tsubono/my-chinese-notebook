@@ -18,4 +18,10 @@ class WordAnswersController < ApplicationController
       render :new
     end
   end
+
+  private
+
+  def answer_params
+    params.require(:word_answer).permit(:w_correct, :w_incorrect).merge(user_id: current_user.id, word_id: @word_id)
+  end
 end
