@@ -29,10 +29,33 @@
         <div class='answer-word-text'>
           <%= @name %>
         </div>
-        <div class='correct-contents'>
-          <%= button_to "正解", {controller: 'word_answers', action: 'index'}, {method: :post, params: {w_correct: '1', w_incorrect: '0', word_id: @word_id, user_id: current_user.id}, class: "btn btn--orange btn--cubic"} %>
-          <%= button_to "不正解", {controller: 'word_answers', action: 'index'}, {method: :post, params: {w_correct: '0', w_incorrect: '1', word_id: @word_id, user_id: current_user.id}, class: "btn btn--orange btn--cubic"} %>
-        </div>
+
+<%# //正解ボタン %>
+      <div class='submit-content'>
+        <%=form_with model: @word_answer, local: true do |f|%>
+          <input name="word_answer[w_correct]" type="hidden" value=<%= 1 %>>
+          <input name="word_answer[w_incorrect]" type="hidden" value=<%= 0 %>>
+          <input name="word_answer[user_id]" type="hidden" value=<%= current_user.id %>>
+          <input name="word_answer[word_id]" type="hidden" value=<%= @word_id %>>
+          <div class='word_answer-form-center'>
+            <%= f.submit "正解", class: 'correct-btn'%>
+          </div>
+        <% end %>
+      </div>  
+<%# //正解ボタン %>
+<%# //不正解ボタン %>
+      <div class='submit-content'>
+        <%=form_with model: @word_answer, local: true do |f|%>
+          <input name="word_answer[w_correct]" type="hidden" value=<%= 0 %>>
+          <input name="word_answer[w_incorrect]" type="hidden" value=<%= 1 %>>
+          <input name="word_answer[user_id]" type="hidden" value=<%= current_user.id %>>
+          <input name="word_answer[word_id]" type="hidden" value=<%= @word_id %>>
+          <div class='word_answer-form-center'>
+            <%= f.submit "不正解", class: 'correct-btn'%>
+          </div>
+        <% end %>
+      </div>  
+<%# //不正解ボタン %>
       </div>
     </div>  
   </div>
