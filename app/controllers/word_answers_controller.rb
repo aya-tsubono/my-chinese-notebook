@@ -1,27 +1,28 @@
 class WordAnswersController < ApplicationController
   def index
     select_word = Word.order("RAND()").limit(1).ids
-    @word_id = Word.find(select_word)
-    @mean = @word_id.pluck(:words_meaning)
-    @name = @word_id.pluck(:words_name)
+    @word = Word.find(select_word)
+    @mean = @word.pluck(:words_meaning)
+    @name = @word.pluck(:words_name)
+    @word_id = @word.pluck(:id)
   end
 
   def new
-    @word_answer = WordAnswers.new
+    @word_answer = WordAnswer.new
   end
 
   def create
-    @word_answer = WordAnswers.new(answer_params)
+    @word_answer = WordAnswer.new(answer_params)
     if @word_answer.save
-      redirect_to root_path
+      redirect_to action: 'index'
     else
-      render :new
+      redirect_to root_path
     end
   end
 
   private
 
   def answer_params
-    params.require(:word_answer).permit(:w_correct, :w_incorrect).merge(user_id: current_user.id, word_id: @word_id)
+    params.require(:word_answer).permit(:w_correct, :w_incorrect, :user_id, :word_id)
   end
 end
