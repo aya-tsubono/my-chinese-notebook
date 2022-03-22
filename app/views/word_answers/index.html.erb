@@ -35,8 +35,6 @@
         <%=form_with model: @word_answer, local: true do |f|%>
           <input name="word_answer[w_correct]" type="hidden" value=<%= 1 %>>
           <input name="word_answer[w_incorrect]" type="hidden" value=<%= 0 %>>
-          <input name="word_answer[user_id]" type="hidden" value=<%= current_user.id %>>
-          <input name="word_answer[word_id]" type="hidden" value=<%= @word_id %>>
           <div class='word_answer-form-center'>
             <%= f.submit "正解", class: 'correct-btn'%>
           </div>
@@ -48,8 +46,6 @@
         <%=form_with model: @word_answer, local: true do |f|%>
           <input name="word_answer[w_correct]" type="hidden" value=<%= 0 %>>
           <input name="word_answer[w_incorrect]" type="hidden" value=<%= 1 %>>
-          <input name="word_answer[user_id]" type="hidden" value=<%= current_user.id %>>
-          <input name="word_answer[word_id]" type="hidden" value=<%= @word_id %>>
           <div class='word_answer-form-center'>
             <%= f.submit "不正解", class: 'correct-btn'%>
           </div>
