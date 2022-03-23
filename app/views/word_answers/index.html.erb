@@ -36,9 +36,7 @@
           <input name="word_answer[w_correct]" type="hidden" value=<%= 1 %>>
           <input name="word_answer[w_incorrect]" type="hidden" value=<%= 0 %>>
           <input name="word_answer[word_id]" type="hidden" value=<%= @word_id[0] %>>
-          <div class='word_answer-form-center'>
-            <%= f.submit "正解", class: 'correct-btn'%>
-          </div>
+            <%= f.submit "正解", class: 'btn btn--correct btn--cubic'%>
         <% end %>
       </div>  
 <%# //正解ボタン %>
@@ -48,9 +46,7 @@
           <input name="word_answer[w_correct]" type="hidden" value=<%= 0 %>>
           <input name="word_answer[w_incorrect]" type="hidden" value=<%= 1 %>>
           <input name="word_answer[word_id]" type="hidden" value=<%= @word_id[0] %>>
-          <div class='word_answer-form-center'>
-            <%= f.submit "不正解", class: 'correct-btn'%>
-          </div>
+            <%= f.submit "不正解", class: 'btn btn--yellow btn--cubic'%>
         <% end %>
       </div>  
 <%# //不正解ボタン %>

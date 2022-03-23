@@ -51,3 +51,9 @@
   font-size: 20px;
   color: red;
 }
+
+.submit-content {
+  display: flex;
+  justify-content: center;
+  padding: 3vh 0;
+}

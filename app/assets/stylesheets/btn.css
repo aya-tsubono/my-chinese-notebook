@@ -4,6 +4,7 @@
 *:after {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
+  -webkit-appearance: none;
 }
 
 html {
@@ -95,7 +96,6 @@ a.btn--orange {
   padding-bottom: 4vh;
 }
 
-
 .btn--green,
 a.btn--green {
   color: #fff;
@@ -127,3 +127,34 @@ a.btn--index {
   padding: 1vh;
 }
 /* //word,sentenceのindex */
+
+/* word_answer(navボタンと共通） */
+.btn--correct {
+  color: #000;
+  background-color: #3CB371;
+  border-bottom: 5px solid #2E8B57;
+  font-size: 18px;
+}
+
+.btn--correct:hover {
+  margin-top: 3px;
+  color: #000;
+  background: #3CB371;
+  border-bottom: 2px solid #2E8B57;
+}
+
+.btn--yellow {
+  color: #000;
+  background-color: #FF6699;
+  border-bottom: 5px solid #CC6699;
+  font-size: 18px;
+}
+
+.btn--yellow:hover {
+  margin-top: 3px;
+  color: #000;
+  background: #FF6699;
+  border-bottom: 2px solid #CC6699;
+}
+
+/* //word_answer */
