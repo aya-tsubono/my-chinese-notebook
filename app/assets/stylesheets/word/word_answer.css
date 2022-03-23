@@ -30,6 +30,12 @@
   font-size: 20px;
 }
 
+.click-content {
+  display: flex;
+  justify-content: center;
+  padding: 3vh 0;
+}
+
 .answer-content {
   display: inline-block;
   border-radius: 60px;

@@ -129,6 +129,20 @@ a.btn--index {
 /* //word,sentenceのindex */
 
 /* word_answer(navボタンと共通） */
+.btn--click {
+  color: #000;
+  background-color: #FF8C00;
+  border-bottom: 5px solid #CC6633;
+  font-size: 18px;
+}
+
+.btn--click:hover {
+  margin-top: 3px;
+  color: #000;
+  background: #FF8C00;
+  border-bottom: 2px solid #CC6633;
+}
+
 .btn--correct {
   color: #000;
   background-color: #3CB371;
@@ -143,14 +157,14 @@ a.btn--index {
   border-bottom: 2px solid #2E8B57;
 }
 
-.btn--yellow {
+.btn--incorrect {
   color: #000;
   background-color: #FF6699;
   border-bottom: 5px solid #CC6699;
   font-size: 18px;
 }
 
-.btn--yellow:hover {
+.btn--incorrect:hover {
   margin-top: 3px;
   color: #000;
   background: #FF6699;

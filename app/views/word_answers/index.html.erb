@@ -18,7 +18,13 @@
         <div class='question-word-text'>
           <%= @mean[0] %>
         </div>
+        <div class='click-content'>
+          <div class='btn btn--click btn--cubic'>
+          答え見てやるぞ
+          </div>
+        </div>
       </div>
+
       <div class='answer-content'>
         <div class='question-title'>
           解答
@@ -29,27 +35,26 @@
         <div class='answer-word-text'>
           <%= @name[0] %>
         </div>
-
-<%# //正解ボタン %>
+      <%# //正解ボタン %>
       <div class='submit-content'>
         <%=form_with model: @word_answer, local: true do |f|%>
           <input name="word_answer[w_correct]" type="hidden" value=<%= 1 %>>
           <input name="word_answer[w_incorrect]" type="hidden" value=<%= 0 %>>
           <input name="word_answer[word_id]" type="hidden" value=<%= @word_id[0] %>>
-            <%= f.submit "正解", class: 'btn btn--correct btn--cubic'%>
+            <%= f.submit "合ってるやーん", class: 'btn btn--correct btn--cubic'%>
         <% end %>
       </div>  
-<%# //正解ボタン %>
-<%# //不正解ボタン %>
+      <%# //正解ボタン %>
+      <%# //不正解ボタン %>
       <div class='submit-content'>
         <%=form_with model: @word_answer, local: true do |f|%>
           <input name="word_answer[w_correct]" type="hidden" value=<%= 0 %>>
           <input name="word_answer[w_incorrect]" type="hidden" value=<%= 1 %>>
           <input name="word_answer[word_id]" type="hidden" value=<%= @word_id[0] %>>
-            <%= f.submit "不正解", class: 'btn btn--yellow btn--cubic'%>
+            <%= f.submit "間違ってたやん", class: 'btn btn--incorrect btn--cubic'%>
         <% end %>
       </div>  
-<%# //不正解ボタン %>
+      <%# //不正解ボタン %>
       </div>
     </div>  
   </div>
