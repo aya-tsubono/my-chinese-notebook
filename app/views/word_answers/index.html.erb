@@ -16,7 +16,7 @@
           単語の意味：
         </div>
         <div class='question-word-text'>
-          <%= @mean %>
+          <%= @mean[0] %>
         </div>
       </div>
       <div class='answer-content'>
@@ -27,7 +27,7 @@
           答え：
         </div>
         <div class='answer-word-text'>
-          <%= @name %>
+          <%= @name[0] %>
         </div>
 
 <%# //正解ボタン %>
@@ -35,8 +35,7 @@
         <%=form_with model: @word_answer, local: true do |f|%>
           <input name="word_answer[w_correct]" type="hidden" value=<%= 1 %>>
           <input name="word_answer[w_incorrect]" type="hidden" value=<%= 0 %>>
-          <input name="word_answer[user_id]" type="hidden" value=<%= current_user.id %>>
-          <input name="word_answer[word_id]" type="hidden" value=<%= @word_id %>>
+          <input name="word_answer[word_id]" type="hidden" value=<%= @word_id[0] %>>
           <div class='word_answer-form-center'>
             <%= f.submit "正解", class: 'correct-btn'%>
           </div>
@@ -48,8 +47,7 @@
         <%=form_with model: @word_answer, local: true do |f|%>
           <input name="word_answer[w_correct]" type="hidden" value=<%= 0 %>>
           <input name="word_answer[w_incorrect]" type="hidden" value=<%= 1 %>>
-          <input name="word_answer[user_id]" type="hidden" value=<%= current_user.id %>>
-          <input name="word_answer[word_id]" type="hidden" value=<%= @word_id %>>
+          <input name="word_answer[word_id]" type="hidden" value=<%= @word_id[0] %>>
           <div class='word_answer-form-center'>
             <%= f.submit "不正解", class: 'correct-btn'%>
           </div>
