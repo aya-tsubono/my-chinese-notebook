@@ -23,6 +23,6 @@ class WordAnswersController < ApplicationController
   private
 
   def answer_params
-    params.require(:word_answer).permit(:w_correct, :w_incorrect, :user_id, :word_id)
+    params.require(:word_answer).permit(:w_correct, :w_incorrect, :word_id).merge(user_id: current_user.id)
   end
 end
