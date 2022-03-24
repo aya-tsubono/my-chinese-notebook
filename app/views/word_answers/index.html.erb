@@ -1,4 +1,5 @@
 <%= render "shared/header" %>
+<script type="javascript" src="answer.js"></script>
 
 <%# 単語テスト %>
 <div class='main'>
@@ -19,9 +20,9 @@
           <%= @mean[0] %>
         </div>
         <div class='click-content'>
-          <div class='btn btn--click btn--cubic', id='click-open'>
+          <button id='answer-btn' class='btn btn--click btn--cubic'>
           答え見てやるぞ
-          </div>
+          </button>
         </div>
       </div>
 
@@ -32,7 +33,7 @@
         <div class='answer-text'>
           答え：
         </div>
-        <div class='answer-word-text'>
+        <div class='answer-word-text' id='answer-text'>
           <%= @name[0] %>
         </div>
       <%# //正解ボタン %>
@@ -51,7 +52,7 @@
           <input name="word_answer[w_correct]" type="hidden" value=<%= 0 %>>
           <input name="word_answer[w_incorrect]" type="hidden" value=<%= 1 %>>
           <input name="word_answer[word_id]" type="hidden" value=<%= @word_id[0] %>>
-            <%= f.submit "間違ってたやん", class: 'btn btn--incorrect btn--cubic'%>
+            <%= f.submit "間違っとるぞ", class: 'btn btn--incorrect btn--cubic'%>
         <% end %>
       </div>  
       <%# //不正解ボタン %>
