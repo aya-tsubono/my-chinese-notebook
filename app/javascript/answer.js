@@ -1,8 +1,14 @@
-function post (){
-  const submit = document.getElementById("correct");
-  submit.addEventListener("click", () => {
-    console.log("イベント発火");
-  });
-};
+window.addEventListener('load', function(){
 
-window.addEventListener('load', post);
+  const btn = document.getElementById('answer-btn');
+  const text = document.getElementById('answer-text');
+  document.getElementById("answer-text").style.visibility ="hidden";
+
+  btn.addEventListener('click', function(){
+    if(text.style.visibility=="visible"){
+      text.style.visibility ="hidden";
+    }else{
+      text.style.visibility ="visible";
+    }
+  })
+})
