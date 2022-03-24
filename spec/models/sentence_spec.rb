@@ -12,10 +12,10 @@ RSpec.describe Sentence, type: :model do
       end
     end
     context '登録できない場合' do
-      it 'sentencesが空では作成できない' do
-        @sentence.sentences = ''
+      it 'sentences_nameが空では作成できない' do
+        @sentence.sentences_name = ''
         @sentence.valid?
-        expect(@sentence.errors.full_messages).to include("Sentences can't be blank")
+        expect(@sentence.errors.full_messages).to include("Sentences name can't be blank")
       end
       it 'sentences_meaningが空では作成できない' do
         @sentence.sentences_meaning = ''
