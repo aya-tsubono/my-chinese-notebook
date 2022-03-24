@@ -13,9 +13,9 @@ RSpec.describe Word, type: :model do
     end
     context '登録できない場合' do
       it 'wordsが空では作成できない' do
-        @word.words = ''
+        @word.words_name = ''
         @word.valid?
-        expect(@word.errors.full_messages).to include("Words can't be blank")
+        expect(@word.errors.full_messages).to include("Words name can't be blank")
       end
       it 'words_meaningが空では作成できない' do
         @word.words_meaning = ''
