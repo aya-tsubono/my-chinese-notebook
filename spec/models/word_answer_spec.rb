@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe WordAnswer, type: :model do
   before do
     @word_answer = FactoryBot.build(:word_answer)
-    binding.pry
   end
 
   describe '単語テストの登録' do
@@ -24,7 +23,7 @@ RSpec.describe WordAnswer, type: :model do
         expect(@word_answer.errors.full_messages).to include("W incorrect can't be blank")
       end
       it 'word_idが空では作成できない' do
-        @word_answer.word_id = ''
+        @word_answer.word = nil
         @word_answer.valid?
         expect(@word_answer.errors.full_messages).to include("Word must exist")
       end

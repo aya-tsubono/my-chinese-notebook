@@ -4,5 +4,4 @@ class WordAnswer < ApplicationRecord
 
   validates :w_correct, presence: true, numericality: true
   validates :w_incorrect, presence: true, numericality: true
-
 end
