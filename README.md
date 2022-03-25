@@ -30,6 +30,7 @@
 ### Association
 
 - belongs_to :user
+- has_many :words
 
 
 ## sentences テーブル
@@ -43,6 +44,7 @@
 ### Association
 
 - belongs_to :user
+- has_many :sentences
 
 
 ## word_answers テーブル
@@ -57,6 +59,7 @@
 ### Association
 
 - belongs_to :user
+- belongs_to :word
 
 
 ## sentence_answers テーブル
@@ -71,3 +74,4 @@
 ### Association
 
 - belongs_to :user
+- belongs_to :sentence
