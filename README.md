@@ -62,6 +62,21 @@
 - belongs_to :word
 
 
+## word_mean_answers テーブル
+
+| Column      | Type       | Options                         |
+| ----------- | ---------- | ------------------------------- |
+| m_correct   | integer    |                                 |
+| m_incorrect | integer    |                                 |
+| word_id     | references | null: false, foreign_key: true  |
+| user_id     | references | null: false, foreign_key: true  |
+
+### Association
+
+- belongs_to :user
+- belongs_to :word
+
+
 ## sentence_answers テーブル
 
 | Column       | Type       | Options                         |
