@@ -2,7 +2,7 @@ class WordAnswersController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :index]
 
   def index
-    select_word = Word.order("RAND()").limit(1).ids
+    select_word = Word.order('RAND()').limit(1).ids
     @word = Word.find(select_word)
     @mean = @word.pluck(:words_meaning)
     @name = @word.pluck(:words_name)

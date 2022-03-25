@@ -25,7 +25,7 @@ RSpec.describe WordAnswer, type: :model do
       it 'word_idが空では作成できない' do
         @word_answer.word = nil
         @word_answer.valid?
-        expect(@word_answer.errors.full_messages).to include("Word must exist")
+        expect(@word_answer.errors.full_messages).to include('Word must exist')
       end
       it 'userが紐付いていないと保存できない' do
         @word_answer.user = nil
