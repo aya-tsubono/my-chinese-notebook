@@ -23,7 +23,7 @@ class WordMeanAnswersController < ApplicationController
 
   private
 
-  def answer_params
-    params.require(:word_m_answer).permit(:m_correct, :m_incorrect, :word_id).merge(user_id: current_user.id)
+  def answer_m_params
+    params.require(:word_mean_answer).permit(:m_correct, :m_incorrect, :word_id).merge(user_id: current_user.id)
   end
 end
