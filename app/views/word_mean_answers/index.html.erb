@@ -1,0 +1,63 @@
+<%= render "shared/header" %>
+<script type="javascript" src="answer.js"></script>
+
+<%# 単語テスト %>
+<div class='main'>
+  <div class='main-inner'>
+    <div class='main-title'>
+      <span>単語の意味テスト</span>
+    </div>
+    <br><br><br>
+    <div class='contents-select'>
+      <div class='question-content'>
+        <div class='question-title'>
+          問題
+        </div>
+        <div class='question-text'>
+          単語：
+        </div>
+        <div class='question-word-text'>
+          <%= @name[0] %>
+        </div>
+        <div class='click-content'>
+          <button id='answer-btn' class='btn btn--click btn--cubic'>
+          答え見てやるぞ
+          </button>
+        </div>
+      </div>
+
+      <div class='answer-content'>
+        <div class='question-title'>
+          解答
+        </div>
+        <div class='answer-text'>
+          答え：
+        </div>
+        <div class='answer-word-text' id='answer-text'>
+          <%= @mean[0] %>
+        </div>
+      <%# //正解ボタン %>
+      <div class='submit-content'>
+        <%=form_with model: @word_mean_answer, local: true do |f|%>
+          <input name="word_mean_answer[m_correct]" type="hidden" value=<%= 1 %>>
+          <input name="word_mean_answer[m_incorrect]" type="hidden" value=<%= 0 %>>
+          <input name="word_mean_answer[word_id]" type="hidden" value=<%= @word_id[0] %>>
+            <%= f.submit "合ってるやーん", class: 'btn btn--correct btn--cubic'%>
+        <% end %>
+      </div>  
+      <%# //正解ボタン %>
+      <%# //不正解ボタン %>
+      <div class='submit-content'>
+        <%=form_with model: @word_mean_answer, local: true do |f|%>
+          <input name="word_mean_answer[m_correct]" type="hidden" value=<%= 0 %>>
+          <input name="word_mean_answer[m_incorrect]" type="hidden" value=<%= 1 %>>
+          <input name="word_mean_answer[word_id]" type="hidden" value=<%= @word_id[0] %>>
+            <%= f.submit "間違っとるぞ", class: 'btn btn--incorrect btn--cubic'%>
+        <% end %>
+      </div>  
+      <%# //不正解ボタン %>
+      </div>
+    </div>  
+  </div>
+</div>
+<%# //単語テスト %>
