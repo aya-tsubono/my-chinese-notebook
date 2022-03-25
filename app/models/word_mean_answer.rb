@@ -1,0 +1,2 @@
+class WordMeanAnswer < ApplicationRecord
+end
