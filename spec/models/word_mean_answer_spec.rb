@@ -13,12 +13,12 @@ RSpec.describe WordMeanAnswer, type: :model do
     end
     context '登録できない場合' do
       it 'm_correctが空では作成できない' do
-        @word_mean_answer.w_correct = ''
+        @word_mean_answer.m_correct = ''
         @word_mean_answer.valid?
         expect(@word_mean_answer.errors.full_messages).to include("M correct can't be blank")
       end
       it 'm_incorrectが空では作成できない' do
-        @word_mean_answer.w_incorrect = ''
+        @word_mean_answer.m_incorrect = ''
         @word_mean_answer.valid?
         expect(@word_mean_answer.errors.full_messages).to include("M incorrect can't be blank")
       end
