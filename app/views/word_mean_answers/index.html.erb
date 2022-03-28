@@ -4,7 +4,7 @@
 <div class='main'>
   <div class='main-inner'>
     <div class='main-title'>
-      <span>単語テスト</span>
+      <span>単語の意味テスト</span>
     </div>
     <br><br><br>
     <div class='contents-select'>
@@ -13,10 +13,10 @@
           問題
         </div>
         <div class='question-text'>
-          単語の意味：
+          単語：
         </div>
         <div class='question-word-text'>
-          <%= @mean[0] %>
+          <%= @name[0] %>
         </div>
         <div class='click-content'>
           <button id='answer-btn' class='btn btn--click btn--cubic'>
@@ -33,24 +33,24 @@
           答え：
         </div>
         <div class='answer-word-text' id='answer-text'>
-          <%= @name[0] %>
+          <%= @mean[0] %>
         </div>
       <%# //正解ボタン %>
       <div class='submit-content'>
-        <%=form_with model: @word_answer, local: true do |f|%>
-          <input name="word_answer[w_correct]" type="hidden" value=<%= 1 %>>
-          <input name="word_answer[w_incorrect]" type="hidden" value=<%= 0 %>>
-          <input name="word_answer[word_id]" type="hidden" value=<%= @word_id[0] %>>
+        <%=form_with model: @word_mean_answer, local: true do |f|%>
+          <input name="word_mean_answer[m_correct]" type="hidden" value=<%= 1 %>>
+          <input name="word_mean_answer[m_incorrect]" type="hidden" value=<%= 0 %>>
+          <input name="word_mean_answer[word_id]" type="hidden" value=<%= @word_id[0] %>>
             <%= f.submit "合ってるやーん", class: 'btn btn--correct btn--cubic'%>
         <% end %>
       </div>  
       <%# //正解ボタン %>
       <%# //不正解ボタン %>
       <div class='submit-content'>
-        <%=form_with model: @word_answer, local: true do |f|%>
-          <input name="word_answer[w_correct]" type="hidden" value=<%= 0 %>>
-          <input name="word_answer[w_incorrect]" type="hidden" value=<%= 1 %>>
-          <input name="word_answer[word_id]" type="hidden" value=<%= @word_id[0] %>>
+        <%=form_with model: @word_mean_answer, local: true do |f|%>
+          <input name="word_mean_answer[m_correct]" type="hidden" value=<%= 0 %>>
+          <input name="word_mean_answer[m_incorrect]" type="hidden" value=<%= 1 %>>
+          <input name="word_mean_answer[word_id]" type="hidden" value=<%= @word_id[0] %>>
             <%= f.submit "間違っとるぞ", class: 'btn btn--incorrect btn--cubic'%>
         <% end %>
       </div>  

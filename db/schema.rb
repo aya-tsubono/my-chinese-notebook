@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_17_043118) do
+ActiveRecord::Schema.define(version: 2022_03_25_014706) do
 
   create_table "sentences", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "sentences_name", null: false
@@ -46,6 +46,17 @@ ActiveRecord::Schema.define(version: 2022_03_17_043118) do
     t.index ["word_id"], name: "index_word_answers_on_word_id"
   end
 
+  create_table "word_mean_answers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "m_correct"
+    t.integer "m_incorrect"
+    t.bigint "user_id", null: false
+    t.bigint "word_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_word_mean_answers_on_user_id"
+    t.index ["word_id"], name: "index_word_mean_answers_on_word_id"
+  end
+
   create_table "words", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "words_name", null: false
     t.string "words_meaning", null: false
@@ -59,5 +70,7 @@ ActiveRecord::Schema.define(version: 2022_03_17_043118) do
   add_foreign_key "sentences", "users"
   add_foreign_key "word_answers", "users"
   add_foreign_key "word_answers", "words"
+  add_foreign_key "word_mean_answers", "users"
+  add_foreign_key "word_mean_answers", "words"
   add_foreign_key "words", "users"
 end
